@@ -15,9 +15,9 @@
     --cor-fundo: #ffffff;         /* Fundo branco e limpo */
     --cor-fundo-secao: #f7f8fa;   /* Um cinza quase branco, muito sutil, para o contraste das seções */
     
-    /* <<< MUDANÇA 1: NOVAS FONTES E BORDAS >>> */
-    --fonte-principal: 'Playfair Display', serif; /* Fonte elegante para títulos */
-    --fonte-texto: 'Merriweather', serif;      /* Fonte serifada legível para textos */
+   /* NOVAS FONTES E BORDAS - Times New Roman */
+    --fonte-principal: 'Times New Roman', Times, serif; /* Fonte tradicional para títulos */
+    --fonte-texto: 'Times New Roman', Times, serif;      /* Fonte tradicional para textos */
     --raio-borda: 25px;                        /* Bordas mais arredondadas para os botões */
     --sombra-caixa: 0 10px 30px rgba(0, 0, 0, 0.07);
 }
@@ -42,12 +42,11 @@ a { text-decoration: none; color: var(--cor-primaria); }
 /* Títulos */
 .section-title {
     font-family: var(--fonte-principal);
-    font-size: 42px; /* Aumentei um pouco para a nova fonte ter mais impacto */
+    font-size: 42px;
     color: var(--cor-titulos);
     text-align: center;
     margin-bottom: 20px;
     font-weight: 700;
-    /* <<< MUDANÇA 2: EFEITO SUTIL NAS LETRAS >>> */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 .section-subtitle {
@@ -55,12 +54,12 @@ a { text-decoration: none; color: var(--cor-primaria); }
     max-width: 700px;
     margin: 0 auto 60px auto;
     font-size: 18px;
-    font-family: var(--fonte-texto); /* Garantindo a fonte correta */
+    font-family: var(--fonte-texto);
 }
 .subsection-title {
     font-family: var(--fonte-principal);
     color: var(--cor-titulos);
-    font-size: 28px; /* Ajuste para a nova fonte */
+    font-size: 28px;
     margin-top: 60px;
     margin-bottom: 30px;
     padding-bottom: 10px;
@@ -77,7 +76,7 @@ section { padding: 80px 0; }
     background-color: var(--cor-primaria);
     color: white;
     padding: 15px 35px;
-    border-radius: var(--raio-borda); /* <<< MUDANÇA 3: USA A NOVA BORDA ARREDONDADA */
+    border-radius: var(--raio-borda);
     font-family: var(--fonte-principal);
     font-weight: 700;
     font-size: 16px;
@@ -86,20 +85,20 @@ section { padding: 80px 0; }
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    letter-spacing: 1px; /* Adiciona um respiro entre as letras */
+    letter-spacing: 1px;
 }
 .cta-button:hover {
     background-color: var(--cor-secundaria);
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}   
+}
 
 
 /* ==========================================================================
    CABEÇALHO
    ========================================================================== */
 header {
-    background-color: var(--cor-primaria); /* Fundo azul escuro */
+    background-color: var(--cor-primaria);
     padding: 15px 0;
     position: sticky;
     top: 0;
@@ -128,7 +127,7 @@ header .container {
 }
 
 .main-nav a {
-    color: #ffffff; /* <<< TEXTO DO MENU BRANCO */
+    color: #ffffff;
     font-family: var(--fonte-principal);
     font-weight: 500;
     font-size: 16px;
@@ -150,7 +149,7 @@ header .container {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--cor-acento); /* <<< LINHA DO HOVER DOURADA */
+    background-color: var(--cor-acento);
     transition: width 0.3s ease;
 }
 
@@ -159,8 +158,8 @@ header .container {
 }
 
 .nav-button {
-    background-color: var(--cor-botao-ouro); /* <<< FUNDO DO BOTÃO DOURADO */
-    color: var(--cor-primaria); /* <<< TEXTO DO BOTÃO AZUL ESCURO */
+    background-color: var(--cor-botao-ouro);
+    color: var(--cor-primaria);
     padding: 10px 20px;
     border-radius: var(--raio-borda);
     transition: all 0.3s ease;
@@ -168,7 +167,7 @@ header .container {
 }
 
 .nav-button:hover {
-    background-color: var(--cor-acento-hover); /* Hover com dourado mais claro */
+    background-color: var(--cor-acento-hover);
     color: var(--cor-primaria);
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -183,12 +182,9 @@ header .container {
     background: none;
     border: none;
     font-size: 24px;
-    color: #ffffff; /* <<< ÍCONE DO HAMBURGUER BRANCO */
+    color: #ffffff;
     cursor: pointer;
 }
-.nav-button:hover { background-color: var(--cor-secundaria); color: white; transform: scale(1.05); }
-.nav-button:hover::after { width: 0; }
-.hamburger-menu { display: none; background: none; border: none; font-size: 24px; color: var(--cor-titulos); cursor: pointer; }
 
 
 /* ==========================================================================
@@ -199,15 +195,15 @@ header .container {
     color: white;
     text-align: center;
     padding: 140px 0;
-    background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2832&auto=format&fit=crop'); /* Imagem de fundo de exemplo */
+    background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2832&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Efeito Parallax */
+    background-attachment: fixed; /* Efeito Parallax para Desktop */
 }
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background-color: rgba(10, 34, 61, 0.7); /* Sobreposição escura para legibilidade */
+    background-color: rgba(10, 34, 61, 0.7);
 }
 .hero .container { position: relative; z-index: 2; }
 .hero h1 {
@@ -220,27 +216,35 @@ header .container {
 .hero p { font-size: 20px; margin-bottom: 40px; }
 
 
-
-
 /* ==========================================================================
    QUEM SOMOS E VALORES
    ========================================================================== */
-/* Este código que você já tem está PERFEITO para o fundo */
 #quem-somos {
-   padding: 80px 0;
-   background-color: #f7f8fa;
-   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23e0e5ee' fill-opacity='1' d='M0%2C160L48%2C176C96%2C192%2C192%2C224%2C288%2C224C384%2C224%2C480%2C192%2C576%2C192C672%2C192%2C768%2C224%2C864%2C224C960%2C224%2C1056%2C192%2C1152%2C160C1248%2C128%2C1344%2C96%2C1392%2C80L1440%2C64L1440%2C320L1392%2C320C1344%2C320%2C1248%2C320%2C1152%2C320C1056%2C320%2C960%2C320%2C864%2C320C768%2C320%2C672%2C320%2C576%2C320C480%2C320%2C384%2C320%2C288%2C320C192%2C320%2C96%2C320%2C48%2C320L0%2C320Z'%3E%3C/path%3E%3C/svg%3E");
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: bottom;
+    padding: 80px 0;
 }
 
-
 .valores-grid {
-    display: grid; /* Ativa o modo de layout em grade */
-    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de tamanho igual */
-    gap: 40px; /* Define um espaçamento de 40px entre as colunas */
-    margin-top: 60px; /* Adiciona um espaço extra abaixo do parágrafo de introdução */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.valor-card {
+    text-align: center;
+}
+
+.valor-card i {
+    font-size: 40px;
+    color: var(--cor-acento);
+    margin-bottom: 20px;
+}
+
+.valor-card h3 {
+    font-family: var(--fonte-principal);
+    color: var(--cor-titulos);
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
 
@@ -300,17 +304,24 @@ header .container {
 .contato-info h3 { font-family: var(--fonte-principal); font-size: 22px; color: var(--cor-titulos); margin-bottom: 20px; }
 .contato-info p { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
 .contato-info i { font-size: 20px; color: var(--cor-primaria); }
-.social-links { margin-top: 30px; }
+
+/* <<< CÓDIGO CORRIGIDO PARA OS ÍCONES SOCIAIS >>> */
+.social-links {
+    margin-top: 20px;
+    text-align: center;
+}
 .social-links a {
-    font-size: 56px;
-    margin-right: 40px;
+    font-size: 32px;
+    margin: 0 15px;
     color: var(--cor-texto-principal);
-    transition: color 0.3s ease;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 .social-links a:hover {
     color: var(--cor-primaria);
-    transform: translateY(-3px); /* Efeito de elevação sutil ao passar o mouse */
+    transform: translateY(-3px);
 }
+
 .contato-form .form-group { margin-bottom: 20px; }
 .contato-form label { display: block; margin-bottom: 5px; font-weight: 500; }
 .contato-form input, .contato-form select, .contato-form textarea {
@@ -325,6 +336,30 @@ header .container {
     outline: none;
     border-color: var(--cor-primaria);
     box-shadow: 0 0 0 2px rgba(10, 76, 138, 0.2);
+}
+
+/* Estilo para a mensagem de sucesso do formulário */
+#mensagem-sucesso {
+    display: none;
+    padding: 40px;
+    border: 1px solid var(--cor-acento);
+    background-color: #ffffff;
+    border-radius: var(--raio-borda);
+    text-align: center;
+    box-shadow: var(--sombra-caixa);
+}
+
+#mensagem-sucesso h3 {
+    font-family: var(--fonte-principal);
+    color: var(--cor-titulos);
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+#mensagem-sucesso p {
+    font-size: 18px;
+    color: var(--cor-texto-principal);
+    line-height: 1.6;
 }
 
 /* ==========================================================================
@@ -369,7 +404,7 @@ footer {
 
 @media (max-width: 768px) {
     .main-nav {
-        display: none; /* Esconde o menu no desktop */
+        display: none;
         position: absolute;
         top: 100%;
         left: 0;
@@ -377,16 +412,23 @@ footer {
         background-color: var(--cor-fundo);
         box-shadow: var(--sombra-caixa);
     }
-    .main-nav.active { display: block; } /* Mostra quando o JS adicionar a classe */
+    .main-nav.active { display: block; }
     .main-nav ul { flex-direction: column; padding: 20px; gap: 0; }
     .main-nav li { width: 100%; }
     .main-nav a { display: block; padding: 15px; text-align: center; }
     .main-nav a:hover { background-color: var(--cor-fundo-secao); }
     .nav-button { width: 100%; margin-top: 10px; }
     
-    .hamburger-menu { display: block; } /* Mostra o ícone do hamburguer */
+    .hamburger-menu { display: block; }
 
     .beneficios-list { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 36px; }
-    .hero p { font-size: 18px; }
+    
+    .hero {
+        background-attachment: scroll; /* Desativa o parallax */
+        padding: 120px 0;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
 }
